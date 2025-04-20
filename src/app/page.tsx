@@ -21,7 +21,7 @@ export default function Home() {
         <section className="bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-black py-20 w-full">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Bringing Your <span className="text-indigo-600 dark:text-indigo-400">Visions</span> to Life
+              Bringing Your <span className="text-indigo-600 dark:text-indigo-400">Vision</span> to Life
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
             Work with us to turn your ideas into reality. We build elegant, powerful software for businesses of all sizes.
