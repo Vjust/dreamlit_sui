@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DreamLit Apps | Innovative Software Solutions",
   description: "DreamLit Apps creates innovative software solutions that transform your ideas into reality. We build elegant, powerful applications for businesses of all sizes.",
-  keywords: ["software development", "custom applications", "web development", "mobile apps", "software solutions"],
+  keywords: ["data engineering", "crypto app development", "custom applications", "web development", "mobile apps", "software solutions"],
   authors: [{ name: "DreamLit Apps" }],
   creator: "DreamLit Apps",
   publisher: "DreamLit Apps",
