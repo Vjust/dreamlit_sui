@@ -6,12 +6,20 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white/90 dark:bg-black/90 backdrop-blur-sm z-10 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center py-6">
+          <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 DreamLit Apps
               </span>
             </div>
+            <nav className="flex gap-6">
+              <a href="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                About
+              </a>
+              <a href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                Support
+              </a>
+            </nav>
           </div>
         </div>
       </header>
@@ -23,8 +31,15 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Bringing <em>your</em> <span className="text-indigo-600 dark:text-indigo-400">Vision</span> to life
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             Work with us to turn your ideas into reality. We build elegant, powerful software for businesses of all sizes.
+            </p>
+            
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              Innovating at the Forefront of <span className="text-indigo-600 dark:text-indigo-400">Web3</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            We're a dynamic crypto development team specializing in building cutting-edge Web3 applications. Our expertise spans both fintech and productivity solutions, with a strong focus on the Sui ecosystem. While Sui is our primary playground, our software engineering capabilities extend across AI, crypto, and finance. Get ready for our upcoming mobile app, designed to bring our innovative solutions right to your fingertips. We're passionate about creating the next generation of decentralized experiences.
             </p>
             
             <div className="mt-12 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300">
