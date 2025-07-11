@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)]">
@@ -7,21 +9,21 @@ export default function About() {
       <header className="bg-white/90 dark:bg-black/90 backdrop-blur-sm z-10 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 DreamLit Apps
               </span>
-            </a>
+            </Link>
             <nav className="flex gap-6">
-              <a href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <Link href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Home
-              </a>
-              <a href="/about" className="text-gray-900 dark:text-white font-medium">
+              </Link>
+              <Link href="/about" className="text-gray-900 dark:text-white font-medium">
                 About
-              </a>
-              <a href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              </Link>
+              <Link href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Support
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

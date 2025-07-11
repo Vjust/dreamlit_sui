@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)]">
@@ -13,12 +15,12 @@ export default function Home() {
               </span>
             </div>
             <nav className="flex gap-6">
-              <a href="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <Link href="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 About
-              </a>
-              <a href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              </Link>
+              <Link href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Support
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
