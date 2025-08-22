@@ -1,33 +1,14 @@
 "use client";
 
-import Link from "next/link";
+import Navigation from "@/components/Navigation"
+import Footer from "@/components/Footer"
+// import CommandPalette from "@/components/CommandPalette"
 
 export default function Support() {
   return (
-    <div className="min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)]">
-      {/* Header */}
-      <header className="bg-white/90 dark:bg-black/90 backdrop-blur-sm z-10 border-b border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                DreamLit Apps
-              </span>
-            </Link>
-            <nav className="flex gap-6">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                About
-              </Link>
-              <Link href="/support" className="text-gray-900 dark:text-white font-medium">
-                Support
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      {/* <CommandPalette /> */}
 
       <main className="flex-grow">
         <section className="bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-black py-20">
@@ -129,13 +110,7 @@ export default function Support() {
         </section>
       </main>
       
-      <footer className="bg-white dark:bg-black py-6 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} DreamLit Apps. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -5,15 +5,27 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:static": "next build",
+    "build:static": "next build && next export",
+    "build:walrus": "next build && next export",
+    "deploy:walrus": "site-builder publish ./out",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mysten/dapp-kit": "^0.17.5",
+    "@mysten/sui": "^1.37.4",
+    "@tanstack/react-query": "^5.85.5",
     "@vercel/analytics": "^1.5.0",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.540.0",
     "next": "15.3.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sharp": "^0.34.3",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

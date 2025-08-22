@@ -1,44 +1,25 @@
 "use client";
 
-import Link from "next/link";
+import Navigation from "@/components/Navigation"
+import Footer from "@/components/Footer"
+// import CommandPalette from "@/components/CommandPalette"
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)]">
-      {/* Header */}
-      <header className="bg-white/90 dark:bg-black/90 backdrop-blur-sm z-10 border-b border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                DreamLit Apps
-              </span>
-            </Link>
-            <nav className="flex gap-6">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-900 dark:text-white font-medium">
-                About
-              </Link>
-              <Link href="/support" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                Support
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      {/* <CommandPalette /> */}
 
       <main className="flex-grow">
         <section className="bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-black py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              About DreamLit Apps
+              About Dreamlit
             </h1>
             
             <div className="prose prose-lg dark:prose-invert mx-auto mb-12">
               <p className="text-xl text-gray-600 dark:text-gray-300 text-center mb-12">
-                We're building the future of decentralized productivity and financial management tools on the Sui blockchain.
+                We are a team of Traditional Enterprise experienced Data Engineers with new upcoming web3 engineers, bringing battle-tested engineering practices to the world of blockchain and decentralized applications.
               </p>
             </div>
 
@@ -47,25 +28,25 @@ export default function About() {
                 <div className="flex items-center mb-4">
                   <div className="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-lg">
                     <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                     </svg>
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white ml-4">
-                    Productivity App on Sui
+                    Enterprise Data Engineering Heritage
                   </h2>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  We're developing a groundbreaking productivity application built natively on the Sui blockchain. This isn't just another task manager – it's a decentralized workspace that leverages Sui's unique capabilities for lightning-fast transactions and true digital ownership.
+                  Our team brings decades of combined experience building production-grade data systems for Fortune 500 companies. We've architected and implemented large-scale ETL pipelines, real-time streaming platforms, and complex data warehouses that process billions of records daily.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                  <li>Decentralized task and project management</li>
-                  <li>On-chain collaboration and team coordination</li>
-                  <li>NFT-based achievement and reward system</li>
-                  <li>Integration with Sui's Move smart contracts</li>
-                  <li>End-to-end encryption with user-owned data</li>
+                  <li>Large-scale data pipeline design and implementation</li>
+                  <li>Real-time stream processing and event-driven architectures</li>
+                  <li>Data modeling for complex business domains</li>
+                  <li>Production system monitoring and reliability engineering</li>
+                  <li>Performance optimization for high-throughput systems</li>
                 </ul>
                 <div className="mt-4 inline-flex items-center text-indigo-600 dark:text-indigo-400">
-                  <span className="text-sm font-medium">Status: Active Development</span>
+                  <span className="text-sm font-medium">Foundation: Battle-Tested Experience</span>
                 </div>
               </div>
 
@@ -77,21 +58,21 @@ export default function About() {
                     </svg>
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white ml-4">
-                    Portfolio Manager MVP
+                    Web3 Engineering Excellence
                   </h2>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Our portfolio management solution is designed to revolutionize how users track and manage their digital assets across the Sui ecosystem and beyond. We're building an MVP that combines powerful analytics with intuitive design.
+                  Our upcoming web3 engineers bring fresh perspectives and cutting-edge blockchain expertise to complement our enterprise foundation. Together, we're pioneering the next generation of decentralized applications that combine reliability with innovation.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                  <li>Real-time portfolio tracking and analytics</li>
-                  <li>Multi-chain asset support with Sui focus</li>
-                  <li>Advanced DeFi position monitoring</li>
-                  <li>Automated reporting and tax preparation</li>
-                  <li>Risk assessment and optimization tools</li>
+                  <li>Sui/Move smart contract development and optimization</li>
+                  <li>Decentralized application architecture and design</li>
+                  <li>Cross-chain integration and interoperability solutions</li>
+                  <li>Web3 user experience and wallet integration</li>
+                  <li>Blockchain scalability and performance engineering</li>
                 </ul>
                 <div className="mt-4 inline-flex items-center text-purple-600 dark:text-purple-400">
-                  <span className="text-sm font-medium">Status: MVP in Progress</span>
+                  <span className="text-sm font-medium">Evolution: Enterprise meets Web3</span>
                 </div>
               </div>
             </div>
@@ -101,20 +82,14 @@ export default function About() {
                 Why We're Building on Sui
               </h3>
               <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Sui's innovative object-centric model and parallel transaction processing make it the perfect platform for our vision. We're leveraging Sui's unique capabilities to create applications that are not just decentralized, but also incredibly fast, scalable, and user-friendly. Our goal is to bridge the gap between Web3 technology and everyday productivity tools.
+                Our enterprise data engineering background uniquely positions us to leverage Sui's innovative object-centric model and parallel transaction processing. We apply the same rigorous engineering practices that built reliable enterprise systems to create blockchain applications that are not just decentralized, but also performant, scalable, and production-ready. This combination of traditional engineering excellence and web3 innovation enables us to deliver superior solutions.
               </p>
             </div>
           </div>
         </section>
       </main>
       
-      <footer className="bg-white dark:bg-black py-6 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} DreamLit Apps. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

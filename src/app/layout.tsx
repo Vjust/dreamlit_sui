@@ -1,41 +1,66 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import "@mysten/dapp-kit/dist/index.css";
 import { Analytics } from "@vercel/analytics/react"
+import { Toaster } from 'sonner'
+import DevConsole from '@/components/DevConsole'
+import ErrorBoundary from '@/components/ErrorBoundary'
+import NetworkBanner from '@/components/NetworkBanner'
+// import { ThemeProvider } from '@/lib/contexts/ThemeContext'
+import DreamLitWalletProvider from '@/providers/WalletProvider'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "DreamLit Apps | Innovative Software Solutions",
-  description: "DreamLit Apps creates innovative software solutions that transform your ideas into reality. We build elegant, powerful applications for businesses of all sizes.",
-  keywords: ["data engineering", "crypto app development", "custom applications", "web development", "mobile apps", "software solutions"],
-  authors: [{ name: "DreamLit Apps" }],
-  creator: "DreamLit Apps",
-  publisher: "DreamLit Apps",
+  title: "Dreamlit | Get Productive Onchain - Sui/Move Development Specialists",
+  description: "Software consulting specializing in Sui/Move development. Building decentralized productivity tools (Waltodo, WalSheetz, Tundra) powered by Walrus storage for SMBs.",
+  keywords: ["Sui blockchain", "Move development", "Walrus storage", "decentralized productivity", "onchain spreadsheets", "Web3 consulting", "blockchain task management", "ETL services", "Waltodo", "WalSheetz", "Tundra", "Dreamlit"],
+  authors: [{ name: "Dreamlit" }],
+  creator: "Dreamlit",
+  publisher: "Dreamlit",
   openGraph: {
-    title: "DreamLit Apps | Innovative Software Solutions",
-    description: "Transform your ideas into powerful software solutions",
+    title: "Dreamlit | Get Productive Onchain",
+    description: "Sui/Move development specialists building decentralized productivity tools for SMBs",
     url: "https://dreamlit.io",
-    siteName: "DreamLit Apps",
+    siteName: "Dreamlit",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://dreamlit.io/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dreamlit - Get Productive Onchain",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DreamLit Apps | Innovative Software Solutions",
-    description: "Transform your ideas into powerful software solutions",
+    title: "Dreamlit | Get Productive Onchain",
+    description: "Sui/Move development specialists building decentralized productivity tools for SMBs",
+    images: ["https://dreamlit.io/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -45,12 +70,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-black dark:text-gray-100`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        {children}
-        <Analytics />        
+        <DreamLitWalletProvider>
+            <NetworkBanner />
+            <ErrorBoundary>
+              {children}
+            </ErrorBoundary>
+            <Analytics />
+            <DevConsole />
+            <Toaster 
+              richColors 
+              position="bottom-right"
+              toastOptions={{
+                className: 'font-sans',
+              }}
+            />
+        </DreamLitWalletProvider>       
       </body>
     </html>
   );

@@ -1,0 +1,75 @@
+# Walrus Sites Configuration for Dreamlit
+site:
+  # Site identifier - this will create dreamlit.wal.app
+  name: dreamlit
+  
+  # Site description
+  description: "Get Productive Onchain with Dreamlit - Sui/Move Development Specialists"
+  
+  # Site icon/favicon
+  icon: /favicon.ico
+  
+  # Custom domain (for future use)
+  domain: dreamlit
+  
+  # Build output directory
+  output_dir: out
+  
+  # Site metadata
+  metadata:
+    title: "Dreamlit | Get Productive Onchain"
+    author: "Dreamlit"
+    keywords: 
+      - "Sui blockchain"
+      - "Move development" 
+      - "Walrus storage"
+      - "decentralized productivity"
+      - "Web3 consulting"
+    
+  # Network configuration
+  network: testnet
+  
+  # Resource configuration
+  resources:
+    # Static files directory
+    static_dir: out
+    
+    # Maximum file size (in bytes)
+    max_file_size: 10485760  # 10MB
+    
+    # Supported file types
+    allowed_extensions:
+      - html
+      - css
+      - js
+      - json
+      - png
+      - jpg
+      - jpeg
+      - gif
+      - svg
+      - ico
+      - txt
+      - woff
+      - woff2
+      - ttf
+      - eot
+
+# Deployment settings
+deployment:
+  # Auto-deploy on changes
+  auto_deploy: false
+  
+  # Deployment environment
+  environment: testnet
+  
+  # Storage settings
+  storage:
+    # Use Walrus for file storage
+    provider: walrus
+    
+    # Data retention
+    retention_days: 365
+    
+    # Redundancy level
+    redundancy: 3

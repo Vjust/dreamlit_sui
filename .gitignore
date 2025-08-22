@@ -39,3 +39,44 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Development-only files (keep local only)
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+hrm_reasoning.db
+
+# Log files
+/logs/
+*.log
+
+# Alternative package manager lock files (keep only the one you use)
+# Since you're using npm, ignore other package manager lock files
+bun.lock
+pnpm-lock.yaml
+yarn.lock
+
+# Development documentation
+CLAUDE.md
+WALRUS_DEPLOYMENT.md
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Local development files
+.local/
